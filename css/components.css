@@ -1,0 +1,35 @@
+.app-logo {
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+}
+
+.search-wraper {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-wraper input {
+  padding: 10px 0;
+  width: min(400px, calc(75vw - 120px));
+  background-color: transparent;
+  border: none;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+}
