@@ -70,3 +70,14 @@ body.dark {
 .theme-switch.active {
   background-color: var(--theme-btn-dark);
 }
+
+.theme-switch .sun,
+.theme-switch .moon {
+  transition: transform 1s ease;
+}
+
+.theme-switch:hover .sun,
+.theme-switch:hover .moon
+{
+  transform: rotate(360deg);
+}

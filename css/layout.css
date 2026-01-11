@@ -39,12 +39,14 @@ body {
   top: 0;
   left: 0;
   transform: translateX(-20%) translateY(-40%);
+  animation: drift1 180s linear infinite alternate;
 }
 
 .circle.two {
   bottom: 0;
   right: 0;
   transform: translateX(26%) translateY(76%);
+  animation: drift2 180s linear infinite alternate;
 }
 
 .tools-container {
@@ -54,4 +56,28 @@ body {
   gap: 20px;
   padding: 20px;
   margin-top: 40px;
+}
+
+@keyframes drift1 {
+  0% {
+    transform: translateX(-20%) translateY(-40%);
+  }
+  50% {
+    transform: translateX(-80%) translateY(calc(50vh - 50%));
+  }
+  100% {
+    transform: translateX(-20%) translateY(calc(100vh - 40%));
+  }
+}
+
+@keyframes drift2 {
+  0% {
+    transform: translateX(26%) translateY(76%);
+  }
+  50% {
+    transform: translateX(76%) translateY(calc(-50vh + 37%));
+  }
+  100% {
+    transform: translateX(26%) translateY(calc(-100vh + 72%));
+  }
 }
