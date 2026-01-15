@@ -27,3 +27,12 @@ function saveThemeData() {
   let jsonData = JSON.stringify(themeData);
   localStorage.setItem("userTheme", jsonData);
 };
+
+const mainContainer = document.getElementById('main');
+const mesh = document.createElement('div');
+const circleOne = document.createElement('div');
+const circleTwo = document.createElement('div');
+mesh.classList.add("mesh")
+circleOne.classList.add("circle", "one");
+circleTwo.classList.add("circle", "two");
+mainContainer.append(mesh, circleOne, circleTwo);
