@@ -23,8 +23,9 @@ body.dark {
 .theme-switch {
   position: absolute;
   padding: var(--theme-btn-padding);
-  top: 10px;
+  top: 25px;
   right: 10px;
+  transform: translateY(-50%);
   border-radius: 20px;
   display: inline-block;
   display: flex;

@@ -90,11 +90,14 @@ body {
 #tool-page {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tool-bar {
   width: 100%;
-  padding: 10px;
+  height: 50px;
   background-color: var(--glass-bg);
   border-bottom: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
