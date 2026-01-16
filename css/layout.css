@@ -1,5 +1,6 @@
 body {
   position: relative;
+  z-index: -5;
 }
 
 .main-container {
@@ -13,6 +14,7 @@ body {
   left: 0;
   position: relative;
   overflow: hidden;
+  z-index: -4;
 }
 
 .mesh {
@@ -24,6 +26,7 @@ body {
   top: 0;
   opacity: 0.05;
   background-size: 64px;
+  z-index: -1;
 }
 
 .circle {
@@ -40,6 +43,7 @@ body {
   left: 0;
   transform: translateX(-20%) translateY(-40%);
   animation: drift1 180s linear infinite alternate;
+  z-index: -3;
 }
 
 .circle.two {
@@ -47,6 +51,7 @@ body {
   right: 0;
   transform: translateX(26%) translateY(76%);
   animation: drift2 180s linear infinite alternate;
+  z-index: -2;
 }
 
 .tools-container {
@@ -80,4 +85,40 @@ body {
   100% {
     transform: translateX(26%) translateY(calc(-100vh + 72%));
   }
+}
+
+#tool-page {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-bar {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-stylish);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.tool-bar div:first-child {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.tool-bar div:first-child:hover {
+  transform: translateX(-5px) translateY(-50%);
 }
