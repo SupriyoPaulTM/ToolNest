@@ -36,3 +36,17 @@ mesh.classList.add("mesh")
 circleOne.classList.add("circle", "one");
 circleTwo.classList.add("circle", "two");
 mainContainer.append(mesh, circleOne, circleTwo);
+
+
+
+window.addEventListener("pageshow", () => {
+  const saved = localStorage.getItem("userTheme");
+  const theme = saved ? JSON.parse(saved) : "dark";
+
+  document.body.classList.toggle("dark", theme === "dark");
+
+  const themeBtn = document.getElementById("theme-btn");
+  if (themeBtn) {
+    themeBtn.classList.toggle("active", theme === "dark");
+  }
+});
