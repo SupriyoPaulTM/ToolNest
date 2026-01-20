@@ -12,6 +12,7 @@ const clockLableFour = document.createElement("span");
 innerFrame.classList.add("clock-inner-frame");
 clockDot.classList.add("clock-dot");
 clockHandS.classList.add("clock-hand-sec");
+clockHandS.id = "clockHandSec";
 clockLableOne.textContent = clockMinNum*4;
 clockLableTwo.textContent = clockMinNum;
 clockLableThree.textContent = clockMinNum*2;

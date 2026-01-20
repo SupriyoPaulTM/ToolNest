@@ -1,6 +1,8 @@
 body.dark {
   --color-bg: hsla(220, 20%, 8%, 1);
   --color-text: hsla(210, 40%, 92%, 1);
+  --text-muted: hsla(210, 15%, 65%, 1);
+  --text-muted-soft: hsla(210, 15%, 55%, 1);
   --color-border: hsla(220, 15%, 25%, 1);
 
   --bg-gradient-start: hsla(220, 30%, 12%, 1);

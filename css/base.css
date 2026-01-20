@@ -12,6 +12,8 @@
 :root {
   --color-bg: hsla(210, 40%, 98%, 1);
   --color-text: hsla(215, 25%, 15%, 1);
+  --text-muted: hsla(215, 15%, 45%, 1);
+  --text-muted-soft: hsla(215, 15%, 55%, 1);
   --color-primary: hsla(221, 83%, 53%, 1);
   --color-secondary: hsla(172, 66%, 50%, 1);
   --color-accent: hsla(180, 75%, 50%, 1);
