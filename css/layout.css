@@ -126,3 +126,9 @@ body {
 .tool-bar div:first-child:hover {
   transform: translateX(-5px) translateY(-50%);
 }
+
+.glass {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
