@@ -1,0 +1,78 @@
+.tool-page {
+  height: 100vh;
+}
+
+.glass {
+  padding: 40px;
+  border: 1px solid var(--glass-border);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: min(85vw, 400px);
+}
+
+.pass-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding-right: 10px;
+  width: 95%;
+}
+
+.pass-box input {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  width: 90%;
+}
+
+.pass-box button {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: none;
+}
+
+.check-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#length-selector {
+  padding: 5px 20px;
+  outline: none;
+  background-color: var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text);
+}
+
+#prefix, #suffix {
+  width: 45%;
+  padding: 5px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 5px;
+  outline: none;
+  color: var(--color-text);
+}
+
+#gen-btn {
+  background-color: var(--glass-border);
+  padding: 10px 20px;
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  color: var(--color-text);
+  margin-top: 20px;
+}

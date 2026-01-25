@@ -61,6 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 15px;
   border-radius: 25px;
   backdrop-filter: blur(10px);
@@ -154,4 +155,8 @@
   justify-content: space-between;
   color: var(--color-text);
   border-bottom: 0.5px solid var(--text-muted);
+}
+
+.icon-lable.small {
+  font-size: 0.85rem;
 }
