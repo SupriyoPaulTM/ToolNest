@@ -189,15 +189,13 @@ function render(query) {
           };
           
           delBtn.onclick = () => {
-            if (confirm('Are You Sure?')) {
-              menuClose();
-              taskItem.classList.add('delete');
-              setTimeout( () => {
-                toDoList.splice(i, 1);
-                saveToLocal();
-                render(query);
-              } , 600);
-            };
+            menuClose();
+            taskItem.classList.add('delete');
+            setTimeout(() => {
+              toDoList.splice(i, 1);
+              saveToLocal();
+              render(query);
+            }, 600);
           };
           
           cancelBtnMenu.onclick = menuClose;
