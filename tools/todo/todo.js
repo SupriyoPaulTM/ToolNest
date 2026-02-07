@@ -239,3 +239,8 @@ function saveToLocal() {
 };
 
 render(query);
+
+overlay.onclick = () => {
+  overlay.classList.remove('active');
+  addPopup.classList.remove('active');
+}

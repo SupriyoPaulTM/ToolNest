@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/base.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../css/layout.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../css/components.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="expenses.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Expenses Tracker - ToolNest: Utlity App</title>
+</head>
+<body class="dark">
+  <div id="main" class="main-container">
+    <div id="tool-page" class="tool-page" data-page="Expenses Tracker">
+      
+      <div class="info-container">
+        <div>Income: <span id="income-amount">0</span></div>
+        <div>Expenses: <span id="expenses-amount">0</span></div>
+        <div>Total: <span id="savings-amount">0</span></div>
+      </div>
+      <div class="search-wraper">
+        <input type="search" id="item-search-field" placeholder="Search for item.."/>
+      </div>
+      <div class="tabs-container">
+        <span id="all-tab" class="selected">All</span>
+        <span id="income-tab">Income</span>
+        <span id="expenses-tab">Expenses</span>
+      </div>
+      <div id="item-container" class="item-container glass">
+        <div class="item">
+          <span class="item-dot expenses"></span>
+          <span class="item-value">100</span>
+          <span class="item-text">vegitable - 2026:02:06</span>
+          <button class="item-menu material-icons">more_vert</button>
+        </div>
+        <div class="empty-tooltip">
+          <img src="../../assets/icons/empty.png" alt="Empty">
+          <label for="empty-icon">
+            Nothing here. Add items.
+          </label>
+        </div>
+      </div>
+      
+      <div id="del-popup" class="popup delete">
+        <label>Are You Sure, You Want To delete?</label>
+        <div class="btns">
+          <button id="cancel-del-btn">Cancel</button>
+          <button id="confirm-del-btn">Delete</button>
+        </div>
+      </div>
+      
+      <div id="overlay" class="overlay"></div>
+      <div id="add-popup" class="popup">
+        <label>Enter Details:</label>
+        <div class="tooltip">Error !</div>
+        <input type="text" inputmode="numeric" pattern="[0-9]*" id="amount-field" placeholder="Amount"/>
+        <input type="text" id="catagory-field" placeholder="Catagory"/>
+        <select name="amount-type" id="select-type">
+          <option value="income">Income</option>
+          <option value="expenses" selected>Expenses</option>
+          <option value="secret"></option>
+        </select>
+        <div class="btns">
+          <button id="cancel-btn">Cancel</button>
+          <button id="ok-btn">Add</button>
+        </div>
+      </div>
+      
+      <div class="btn-bar" id="btn-bar">
+        <button id="plus-btn" class="main btn material-icons">add</button>
+        <div class="main-menu">
+          <button id="add-item-btn">Add New</button>
+          <button id="current-month-data">Show Only This Month</button>
+          <button id="searchByDate">Search by date</button>
+          <button id="searchByAmount">Search by Amount</button>
+          <button id="searchByString">Search by String</button>
+          <button id="del-all-btn">Delete All</button>
+        </div>
+      </div>
+      
+    </div>
+    <label id="theme-btn" class="theme-switch active">
+      <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+      <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></svg></span>
+      <span class="slider"></span>
+    </label>
+  </div>
+  <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/tools.js" type="text/javascript" charset="utf-8"></script>
+  <script src="expenses.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
