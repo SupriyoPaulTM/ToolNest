@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../../css/base.css" type="text/css" media="all" />
   <link rel="stylesheet" href="../../css/layout.css" type="text/css" media="all" />
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../css/components.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="notes.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>Notes - ToolNest: Utlity App</title>
 </head>
@@ -14,7 +16,50 @@
   <div id="main" class="main-container">
     <div id="tool-page" class="tool-page" data-page="Notes">
       
+      <div id="notes-container" class="notes-container">
+        <div class="empty-tooltip">
+          <img src="../../assets/icons/empty.png" />
+          <span>No Items. Please add.</span>
+        </div>
+      </div>
       
+      <div id="overlay" class="overlay"></div>
+      
+      <div id="edit-box" class="popup">
+        <div class="form-title">Add Notes</div>
+        <div class="tooltip">Input fields must be valid.</div>
+        <div class="form-component">
+          <label for="title-field">Title:</label>
+          <input type="text" id="title-field">
+        </div>
+        <div class="form-component color">
+          <label for="color-field">Border Color:</label>
+          <input type="color" id="color-picker">
+          <button id="random-btn" class="material-icons">shuffle</button>
+        </div>
+        <div class="form-component textarea">
+          <textarea id="content-field" cols="25" rows="10"></textarea>
+          <i class="material-icons">keyboard_double_arrow_right</i>
+        </div>
+        <div class="btns">
+          <button id="cancel-btn">Cancel</button>
+          <button id="confirm-btn">Add</button>
+        </div>
+      </div>
+      
+      <div id="view-box" class="popup">
+        <div class="view-title"></div>
+        <div class="view-content"></div>
+        <div class="btns">
+          <button class="delete-btn">Delete</button>
+          <button class="edit-btn">Edit</button>
+          <button class="close-btn">Close</button>
+        </div>
+      </div>
+      
+      <div id="menu-box" class="popup"></div>
+      
+      <button id="plus-btn" class="plus-btn material-icons">add</button>
       
     </div>
     <label id="theme-btn" class="theme-switch active">
@@ -25,5 +70,6 @@
   </div>
   <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="../../js/tools.js" type="text/javascript" charset="utf-8"></script>
+  <script src="notes.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

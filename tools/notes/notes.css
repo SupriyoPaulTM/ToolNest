@@ -1,0 +1,238 @@
+.plus-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: #00000099;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-text);
+  border: 1px solid var(--glass-border);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 101;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.form-component {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-component input,
+.form-component textarea {
+  padding: 5px;
+  border: 1px solid var(--text-muted);
+  border-radius: 10px;
+  background-color: var(--glass-border);
+  outline: none;
+  color: var(--color-text);
+}
+
+.form-component.color {
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.popup .btns button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.popup .btns {
+  text-align: right;
+}
+
+#cancel-btn {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+#confirm-btn {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+#color-picker {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.notes-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  overflow: scroll;
+  margin-bottom: 50px;
+}
+
+.note-item {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.note-title {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+
+.note-content {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.form-component textarea::-webkit-resizer {
+  transform: translate(-10px, -10px);
+  opacity: 0;
+}
+
+.textarea {
+  position: relative;
+  width: max-content;
+  margin: auto;
+}
+
+.textarea .material-icons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  transform: rotate(45deg);
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#view-box {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.view-content {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+#view-box .btns {
+  float: right;
+  display: flex;
+  gap: 20px;
+}
+
+.delete-btn {
+  background-color: orangered;
+  color: #000;
+}
+
+.edit-btn {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.tooltip {
+  color: orangered;
+  text-align: center;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.popup.warning .tooltip {
+  display: block;
+}
+
+.note-item.delete {
+  animation: vanish 0.6s linear;
+}
+
+@keyframes vanish {
+  to {
+    opacity: 0;
+  }
+}
+
+.empty-tooltip {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.notes-container.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes-container.empty .empty-tooltip {
+  display: flex;
+}
+
+.empty-tooltip img {
+  width: 80px;
+  height: 80px;
+}
