@@ -19,6 +19,7 @@ themeBtn.onclick = function() {
     saveThemeData();
   };
   themeBtn.classList.toggle("active");
+  themeBtn.classList.toggle('spin');
   document.body.classList.toggle("dark");
 };
 
